@@ -1,17 +1,12 @@
-meme_dict = {
-            "CRINGE": "Algo excepcionalmente raro o embarazoso",
-            "LOL": "Una respuesta común a algo gracioso",
-            "ROFL": "una respuesta a una broma",
-            "SHEESH": "ligera desaprobación",
-            "CREEPY": "aterrador, siniestro",
-            "AGGRO": "ponerse agresivo/enojado"
-            }
+import random
+caracters = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
-word = input("Escribe una palabra que no entiendas (¡con mayúsculas!): ")
+longitud = int(input("Ingrese la longitud de su contraseña: "))
 
-if word in meme_dict.keys():
-    # ¿Qué debemos hacer si se encuentra la palabra?
-    print(meme_dict[word])
-else:
-    # ¿Qué hacer si no se encuentra la palabra?
-    print("Todavia no esta registrada esta palabra...")
+password = ""
+
+for i in range(longitud):
+    password += random.choice(caracters)
+    
+print(password)
+
